@@ -1,0 +1,18 @@
+[package]
+name = "titchy-rs"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Faithful Rust implementation of the Titchy time-series compressor"
+
+[lib]
+name = "titchy_rs"
+path = "src/lib.rs"
+
+[[bin]]
+name = "titchy"
+path = "src/bin/titchy.rs"
+
+[[bench]]
+name = "paper_bench"
+harness = false
