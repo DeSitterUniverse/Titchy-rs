@@ -6,7 +6,7 @@ streaming, adaptive compression parameters, and direct bit, sample, and range
 access without decompressing the complete file.
 
 Titchy is designed for integer samples such as ADC readings, IMU axes, counters,
-and packed sensor registers. Timestamps should be stored separately or reconstructed 
+and packed sensor registers. Timestamps should be stored separately or reconstructed
 from the sampling schedule.
 
 ## Features
@@ -20,6 +20,19 @@ from the sampling schedule.
 - Indexed bit, sample, and range retrieval
 - Raw little- and big-endian sensor byte support
 - Deterministic demo, benchmarks, and parameter sweeps
+
+## Why Titchy?
+
+- **Micro-chunking:** Processes configurable chunks as small as one sample,
+  reducing buffering requirements and supporting low-latency encoding.
+- **Random access:** Retrieves individual bits, samples, or ranges through the
+  split index without decompressing the complete time series.
+- **Memory-conscious operation:** Bounds the encoder's active dictionary with
+  LRU eviction, allowing operation under small, explicitly configured memory
+  budgets.
+- **Incremental transmission:** Encodes samples online and emits compressed
+  packets at configurable intervals, supporting timely sensor updates without
+  waiting for a complete recording.
 
 ## Quickstart
 
