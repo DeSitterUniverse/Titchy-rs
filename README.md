@@ -19,7 +19,6 @@ from the sampling schedule.
 - Batch and online packet encoding
 - Indexed bit, sample, and range retrieval
 - Raw little- and big-endian sensor byte support
-- Deterministic demo, benchmarks, and parameter sweeps
 
 ## Why Titchy?
 
